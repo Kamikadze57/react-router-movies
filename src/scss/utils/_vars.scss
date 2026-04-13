@@ -1,12 +1,36 @@
-$accent-color: #ffb36c;
-$accent-darker: #e09b5a;
-
-$bg-accent: #e8e8e8;
-$bg-primary: #fff;
-
-$text-primary: #000;
-$text-secondary: #fff;
-$placeholder-color: #878787;
-
 $fast: 100ms ease-in-out;
 $normal: 200ms ease-in-out;
+
+:root {
+  // Значення для темної теми (Dark)
+  --accent-color: #0059f7;
+  --accent-darker: #00308f;
+
+  --bg-primary: #1e2b5b;
+  --bg-secondary: #081131;
+  --bg-dark: #070e27;
+
+  --text-primary: #fff;
+  --text-secondary: #7e8bb6;
+  --text-tertiary: #ccd2e9;
+
+  --btn-bg: #1c3590;
+  //   --placeholder-color: #878787;
+}
+
+// Значення для світлої теми (Light)
+[data-theme="light"] {
+  --accent-color: #0059f7;
+  --accent-darker: #002670;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f7ff;
+  --bg-dark: #e0e6f5;
+
+  --text-primary: #273464;
+  --text-secondary: #7e8bb6;
+  --text-tertiary: #ccd2e9;
+
+  --btn-bg: #98a6c7;
+  //   --placeholder-color: #a0a0a0;
+}

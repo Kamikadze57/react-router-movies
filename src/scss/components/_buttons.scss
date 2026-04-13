@@ -1,0 +1,25 @@
+@use "../utils/vars";
+
+.button {
+  font-size: 16px;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 7px;
+  color: var(--text-primary);
+  background-color: var(--btn-bg);
+  transition:
+    color vars.$normal,
+    background-color vars.$normal;
+  &:hover {
+    color: var(--text-tertiary);
+    background-color: var(--accent-darker);
+  }
+}
+
+.scroll-to-top__btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 18px;
+  padding: 10px 15px 15px;
+}

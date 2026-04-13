@@ -10,14 +10,16 @@ html {
   list-style: none;
   text-decoration: none;
   font-style: normal;
-  // color: vars.$text-primary;
   box-sizing: border-box;
+  color: var(--text-primary);
 }
 body {
-  font-family: "Montserrat";
+  font-family: "Sora";
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--bg-primary);
+  transition: background-color vars.$normal;
 }
 
 img {
@@ -25,11 +27,15 @@ img {
   max-width: 100%;
   height: auto;
 }
-main {
+main,
+#root {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 button,
 a {
+  color: inherit;
   cursor: pointer;
 }
 .visually-hidden {

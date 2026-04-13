@@ -1,0 +1,18 @@
+.hero {
+  padding: 100px 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("https://cdn.theatlantic.com/thumbor/DH3TrORBtLJQQAyuYlCGcd_WIhc=/331x0:2398x2067/1080x1080/media/img/mt/2020/03/GettyImages_120685930/original.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__title,
+.hero__subtitle {
+  text-align: center;
+  color: #fff;
+  &:last-child {
+    max-width: 50%;
+    margin: 30px auto 0;
+  }
+}

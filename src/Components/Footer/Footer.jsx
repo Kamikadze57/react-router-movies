@@ -6,12 +6,15 @@ const Footer = ({ baseUrl }) => {
     <>
       <footer>
         <div className="container footer__container">
+          <div className="footer-logo__box">
           <Link className="logo__link" to="/">
-            <svg className="logo">
+            <svg className="footer__logo">
               <use href={`${baseUrl}/icons.svg#logo`}></use>
             </svg>
           </Link>
-          <div className="footer-about__box">
+          <p className="footer-logo__text">Simple. Fast. <br/>Movies Right Now.</p>
+          </div>
+          <div className="footer-about__box footer__box">
             <h6 className="footer__title">About Us</h6>
             <ul className="footer__list">
               <li className="footer__item">
@@ -36,7 +39,7 @@ const Footer = ({ baseUrl }) => {
               </li>
             </ul>
           </div>
-          <div className="footer-contacts__box">
+          <div className="footer-contacts__box footer__box">
             <h6 className="footer__title">Contact Us</h6>
             <ul className="footer__list">
               <li className="footer__item">
@@ -56,17 +59,17 @@ const Footer = ({ baseUrl }) => {
               </li>
               <li className="footer__item">
                 <a href="" className="footer-item__link">
-                  Contact Email
+                  Feedback Form
                 </a>
               </li>
               <li className="footer__item">
                 <a href="" className="footer-item__link">
-                  Feedback Form
+                  Contact Email
                 </a>
               </li>
             </ul>
           </div>
-          <div className="footer-features__box">
+          <div className="footer-features__box footer__box">
             <h6 className="footer__title">Discovery & Features</h6>
             <ul className="footer__list">
               <li className="footer__item">
@@ -76,17 +79,12 @@ const Footer = ({ baseUrl }) => {
               </li>
               <li className="footer__item">
                 <a href="" className="footer-item__link">
-                  Release Calendar
-                </a>
-              </li>
-              <li className="footer__item">
-                <a href="" className="footer-item__link">
-                  Surprise Me!
-                </a>
-              </li>
-              <li className="footer__item">
-                <a href="" className="footer-item__link">
                   Top Rated
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="" className="footer-item__link">
+                  Release Calendar
                 </a>
               </li>
               <li className="footer__item">
@@ -94,13 +92,18 @@ const Footer = ({ baseUrl }) => {
                   FAQ
                 </a>
               </li>
+              <li className="footer__item">
+                <a href="" className="footer-item__link">
+                  Surprise Me!
+                </a>
+              </li>
             </ul>
           </div>
         </div>
+      </footer>
         <div className="powered-by__box">
           <p className="powered-by__text">Powered By: MilX Corporation</p>
         </div>
-      </footer>
     </>
   );
 };
