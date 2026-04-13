@@ -1,0 +1,22 @@
+.movies {
+  margin: 20px 0 50px;
+}
+
+.search__form {
+  display: flex;
+  gap: 5px;
+  // align-items: center;
+  justify-content: center;
+}
+.movies-search__input {
+  border: 1px solid var(--btn-bg);
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 40%;
+  font-size: 14px;
+  background: var(--text-tertiary);
+  &:focus {
+    border: 1px solid var(--text-primary);
+  }
+}
