@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useParams, Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { getMovieDetails } from "../../api/movies-api";
 
@@ -6,20 +6,18 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams(); // ID з URL
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
-// const location = useLocation();
+  // const location = useLocation();
 
+  // console.log(location);
 
-// console.log(location);
-
-
-useEffect(() => {
+  useEffect(() => {
     getMovieDetails(movieId).then(setMovie);
   }, [movieId]);
 
   if (!movie) return <div className="loading__box">Loading...</div>;
 
   const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-console.log(navigate);
+  console.log(navigate);
   return (
     <>
       <section className="movie-details">
@@ -52,8 +50,9 @@ console.log(navigate);
               </li>
             </ul>
           </section>
-
-          <Outlet />
+          <Suspense fallback={<p>Loading sub-info...</p>}>
+            <Outlet />
+          </Suspense>
         </div>
       </section>
     </>
